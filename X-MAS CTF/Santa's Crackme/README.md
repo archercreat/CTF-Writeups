@@ -4,15 +4,15 @@
 
 ### Santa's Crackme
 
-![title](images/1_title.png)
+![title](Images/1_title.png)
 
 The first and the most easiest crackme. The input is xored with 3 and compared with encoded flag.
 
-![main](images/1_main.png)
+![main](Images/1_main.png)
 
 
 
-![flag](images/1_flag.png)
+![flag](Images/1_flag.png)
 
 
 
