@@ -2,7 +2,7 @@
 
 ![7_title](images/7_title.png)
 
-Having launched the program, we are presented with a 2-minute funny video about duck eating microcontroller.
+After launching the program, we are presented with a 2-minute funny video about duck eating microcontroller.
 
 ![7_vod](images/7_vod.png)
 
