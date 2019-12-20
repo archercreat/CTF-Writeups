@@ -96,7 +96,7 @@ for i in range(len(pos)):
 print(''.join(str(i) for i in flag))
 ```
 
-``` python
+``` 
 >>> 0-MAS{= l0v3 (+ 5t4llm4n 54n74)}
 ```
 
