@@ -26,6 +26,6 @@ for i in flag:
 print password
 ```
 
-```python 
+``` 
 >>> X-MAS{54n74_15_b4d_47_l1c3n53_ch3ck1n6}
 ```
