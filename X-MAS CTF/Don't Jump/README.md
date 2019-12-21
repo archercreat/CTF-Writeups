@@ -16,7 +16,7 @@ After that, **DebugActiveProcess** called and the child process resumes its exec
 
 First of all lets dump the child process.
 
-Before WinMain the Tls_callback function checks debugger presense by calling **NtQueryInformationProcess** with **DebugPort** parameter. If it finds the presence of debugger, it changed they key that decrypts executable image so the data gets currupted.
+Before WinMain the Tls_callback function checks debugger presence by calling **NtQueryInformationProcess** with **DebugPort** parameter. If it finds the presence of debugger, it changes the key that decrypts executable image so the data gets currupted.
 
 The main function of child process:
 
@@ -24,7 +24,7 @@ The main function of child process:
 
 And here comes the real challenge.
 
-The check_password function is destoyed, when the child hits invalid instruction, the parent gets control back and checks what happend.
+The check_password function is destoyed and when the child hits invalid instruction, the parent gets control back and checks what happend.
 
 ![8_check_password](images/8_check_password.png)
 
@@ -32,7 +32,7 @@ The parent's dispatch function is also destroyed, the first 20 bytes are stolen 
 
 ![8_dispatch](images/8_dispatch.png)
 
-So first of all we have to recover dispatch function. I wrote IDApython script that nops every **jmp $+5** instruction. I also appended stolen bytes to the beggining of the function. After all that, it function started to make sence.
+So first of all we have to recover dispatch function. I wrote IDApython script that nops every **jmp $+5** instruction. I also appended stolen bytes to the beggining of the function. After all that, the function started to make sence.
 
 ![8_dispatch_decompiled](images/8_dispatch_decompiled.png)
 
@@ -220,7 +220,7 @@ int __stdcall gen_seed()
 }
 ```
 
-So, **gen_seed** always return 0, and since it passed to **srand** every **rand** after that return known sequence.
+So, **gen_seed** always return 0, and since it passed to **srand** every **rand** after that returns known sequence.
 
 And because of that, there is no random and we can mark every loop that is being executed. (i marked it as "yes")
 
