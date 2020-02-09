@@ -130,6 +130,6 @@ print(flag)
 ```
 
 ```bash
-b'{ezpz_but_1t_1s_pr3t3x}'
+b'{ezpz_but_1t_1s_pr3t3xt}'
 ```
 
