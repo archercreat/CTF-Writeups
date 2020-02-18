@@ -21,7 +21,7 @@ from unicorn import *			   # импортируем библиотеку с эм
 from unicorn.x86_const import *
 
 def hook_code(uc, address, size, user_data):
-    if address == 0x01AA:			# адрес, после которого идет прыжок по адресу 0х2
+    if address == 0x01AA: # адрес, после которого идет прыжок по адресу 0х2
         print('end of decoding stage')
         shellcode = uc.mem_read(2, 0x63) # считываем из памяти по адресу 0х2 0х63 байт
         open('shellcode', 'wb').write(shellcode) # и сохраняем в файл
@@ -30,14 +30,14 @@ def hook_code(uc, address, size, user_data):
         uc.emu_stop()
 
 
-uc = Uc(UC_ARCH_X86, UC_MODE_32)  	 # создаем эмулятор. В данном случае он 32-битный
+uc = Uc(UC_ARCH_X86, UC_MODE_32)     # создаем эмулятор. В данном случае он 32-битный
 
 base = 0
-uc.mem_map(base, 0x1000)			 # алоцируем 1КБ памяти для нашего кода
-uc.mem_write(base, raw)				 # записвыем в него код
+uc.mem_map(base, 0x1000)             # алоцируем 1КБ памяти для нашего кода
+uc.mem_write(base, raw)              # записвыем в него код
 uc.hook_add(UC_HOOK_CODE, hook_code) # добавляем хук, после которого эмулятор будет
-									 # останавливаться на каждой инструкции и вызывать
-    								 # нашу функцию
+                                     # останавливаться на каждой инструкции и вызывать
+                                     # нашу функцию
 
 try:
     uc.emu_start(base, base + len(raw))
@@ -52,7 +52,7 @@ except UcError as e:
 
 откроем его в Иде:
 
-![shellcode](C:\Users\archercreat\Downloads\rev\4\images\shellcode.png)
+![shellcode](images/shellcode.png)
 
 Видно, что программа берет 4 байта начиная с адреса 0x29, умножает их на **0x3B9ACA07** и записывает обратно.
 
