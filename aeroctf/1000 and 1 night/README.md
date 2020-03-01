@@ -127,7 +127,7 @@ from pwn import *
 import sys
 import re
 
-def main(target):
+def main(r):
     answers = open('out.txt').readlines()
     while True:  
         raw = r.recv()
