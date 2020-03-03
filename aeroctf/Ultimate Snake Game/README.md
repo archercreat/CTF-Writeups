@@ -2,10 +2,11 @@
 
 ### Description:
 
+```
 This is a super secure "Snake" game, but the rules are incredible.
 
 And the snake does not move correctly.
-
+```
 
 
 The binary is packed with VMprotect. Clearly the author did not want us to reverse this challenge :(
