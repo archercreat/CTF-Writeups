@@ -54,9 +54,9 @@ Since the buffer on stack, we have simple write primitive
     RWX:      Has RWX segments
 ```
 
-Since It has write execute (????) segment. We just write to our shellcode from [here](http://shell-storm.org/shellcode/files/shellcode-806.php).
+Since the binary has write execute (????) segment. We just write our shellcode from [here](http://shell-storm.org/shellcode/files/shellcode-806.php) to specified segment location.
 
-After it, we overwrite GOT puts with address of our shellcode and jump to it :)
+After that, we overwrite GOT puts with address of our shellcode and jump to it :)
 
 ```python
 from pwn import *
