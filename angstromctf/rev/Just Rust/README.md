@@ -57,6 +57,7 @@ def find_all_possible(s):
         print(out)
 
 def main():
+    flag = "CCHJEHMKCFKJCEOLFOJLMOJJBDN@H@BAODMJHFCJMOOKMOOOOOAOFOGI@@@@@@@@"
     s = Solver()
     out = [0x40 for i in range(72)]
     for i in range(32):
