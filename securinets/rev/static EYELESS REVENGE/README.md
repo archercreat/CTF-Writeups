@@ -130,7 +130,7 @@ void __noreturn check()
 
 First, program checks if our input starts with **securinets{**, after that it sends 's' to srand as a seed
 
-After that if checks:
+After that it checks:
 
 **input[i] ^ key[i] ^ rand_seq[i] == 0**
 
