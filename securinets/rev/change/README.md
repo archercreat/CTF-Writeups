@@ -1,6 +1,8 @@
 # CHANGE 
 
 The binary `task` is a python compiled script. We use pyi-archive-viewer to extract embedded python script.
+We add `03 f3 0d 0a 6c e7 a3 5b` at the beginning of pyc file since its pytnon2.7.
+If it was python3+ we would add `42 0d 0d 0a 00 00 00 00 00 00 00 00 00 00 00 00`
 
 After that we use `uncompyle6` to convert pyc into python script.
 
