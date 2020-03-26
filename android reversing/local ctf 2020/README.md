@@ -19,10 +19,10 @@ ida pro (ну а че)
 Обязательно нужно создать эмулятор без гугл апи (чтобы был рут)
 
 ## Оглавление
-1. [Missing So](##MissingSo)
-2. [Sign](##Sign)
-3. [LateProblem](##LateProblem)
-4. [task_附件](##task_附件)
+1. [Missing So](#MissingSo)
+2. [Sign](#Sign)
+3. [LateProblem](#LateProblem)
+4. [task_附件](#task_附件)
 
 
 ## MissingSo
