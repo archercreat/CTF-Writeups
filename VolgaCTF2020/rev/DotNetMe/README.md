@@ -13,7 +13,7 @@ Then it checks if `len(key.split('-')[i]) == 4`
 
 So the flag format should be `YYYY-YYYY-YYYY-YYYY-YYYY-YYYY`
 
-After that it performs xor checksum of all characters in the string and compares the values with 41.
+After that it performs xor checksum of all characters in the string and compares the value with 41.
 
 Then it gets encoded flag, creates new string with out input and encoded flag and checks xor checksum with 74.
 
