@@ -2,7 +2,7 @@
 
 > Don't get confused when solving it!
 
-The binary is packed it confuser v 1.3. 
+The binary is packed with confuser v 1.3. 
 
 Solution:
 
