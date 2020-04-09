@@ -2,9 +2,9 @@
 ![](https://i.imgur.com/MNurhGt.png)
 
 # Table of Contents
-1. [Crypto](#Crypto:)
-2. [Forensics](#Forensics:)
-3. [Reverse](#Reverse:)
+1. [Crypto](#Crypto)
+2. [Forensics](#Forensics)
+3. [Reverse](#Reverse)
 
 # Crypto:
 
